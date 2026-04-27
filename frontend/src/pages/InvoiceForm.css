@@ -1,0 +1,32 @@
+/* InvoiceForm.css */
+.section-title { font-size: 14px; font-weight: 700; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+
+.item-row {
+  display: grid;
+  grid-template-columns: 1fr 100px 140px 120px 36px;
+  gap: 12px;
+  align-items: end;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+.item-row:last-child { border: none; margin: 0; }
+.item-total-val {
+  height: 42px;
+  display: flex; align-items: center;
+  font-weight: 600; color: var(--text);
+}
+.item-del { align-self: end; margin-bottom: 0; height: 42px; }
+
+.form-bottom { display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+
+.totals-card {}
+.total-summary { border-top: 1px solid var(--border); padding-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.ts-row { display:flex; justify-content:space-between; font-size:14px; color:var(--text2); }
+.ts-total { font-size:18px; font-weight:700; color:var(--text); padding-top:8px; border-top:1px solid var(--border); }
+
+@media (max-width: 900px) {
+  .item-row { grid-template-columns: 1fr 80px 110px 36px; }
+  .item-total { display: none; }
+  .form-bottom { grid-template-columns: 1fr; }
+}
